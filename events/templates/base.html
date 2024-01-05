@@ -1,0 +1,85 @@
+<!--html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href = "{% static 'css/form.css' %}">
+</head> 
+<body>
+    <section class="container">
+        <h4>The Event Comes In</h4>
+        <form action="#" class="form">
+            <div class="input-box">
+                <label>Full Name:</label>
+                <input type="text" placeholder="Enter your name" name="full_name" required>
+            </div>
+
+            <div class="input-box">
+                <title>Event Venue:</title>
+                <input type="text" placeholder="Enter your Address" name="event_venue" required>
+            </div>
+
+            <div class="input-box">
+                <title>Mobile no:</title>
+                <input type="number" placeholder="Enter your contact no." name="mobile_number" required>
+            </div>    
+            <div class="input-box">
+                <title>How many members you required?</title>
+                <input type="number" placeholder="Enter members:" name="members_required" required>
+            </div>    
+            <div class="input-box">
+                <title>Seating Arrangement:</title>
+                <input type="text" placeholder="which will you prefer theatre style or round tables?" name="seating_arrangement" required>
+            </div>    
+            <div class="input-box">
+                <title>DO you need an Event Signpage:</title>
+                <input type="text" placeholder="Banners or any type of background?" name="event_signpage_preference" required>
+            </div>    
+            
+            <div class="column">
+                <div class="input-box">
+                    <title>Event Duration:</title>
+                    <input type="number" placeholder="Enter your Event duration:" name="event_duration" required>
+                </div>
+
+                <div class="input-box">
+                    <title>Estimated Number of Guests:</title>
+                    <input type="number" placeholder="Estimated Number of Guests:" name="estimated_guests" required>
+                </div>
+                <br/>
+                <div class="input-box">
+                    <label for="id_date">Event_Date:</label>
+                    <input type="date" name="event_date" required>
+                </div>
+            </div>
+            <button>Event Registered
+            </button>
+        </form>
+    </section>
+</body>
+</html-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event Registration form</title>
+</head>
+<body>
+    <h2>Create Event - {{ event_type|title }}</h2>
+    <form method = "POST" action="{% url 'base_with_event_type' event_type=event_type %}">
+        {% csrf_token %}
+        {{ event_form.as_p}}
+    
+        <a href="{% url 'payment' %}">submit</a>
+
+    </form>
+
+
+
+</body>
+</html>

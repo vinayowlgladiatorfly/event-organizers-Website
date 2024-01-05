@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .success-icon {
+            color: #4CAF50;
+            font-size: 72px; /* Adjust the font size as needed */
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            color: #4CAF50;
+        }
+
+        h6 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-icon">&#10004;</div>
+    <h5>Payment Success!!</h5>
+    <h6>Our members will be there at your location!!</h6>
+    <a href="{% url 'index' %}">Go Back !!</a>
+</body>
+</html>

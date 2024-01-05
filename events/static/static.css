@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;1,6..12,300;1,6..12,500&display=swap');
+
+:root{
+    --main-color:'blue';
+}
+*{font-family: 'Nunito Sans', sans-serif; 
+  margin:0;padding:0;box-sizing:border-box;outline:none;border:none;text-decoration:none;text-transform: capitalize;transition: .2s linear;}
+  
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;    
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#444;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--main-color);
+    border-radius:5rem;
+}
+
+body{
+    background:#222;
+}
+
+.section{
+    padding:2rem 9%;
+}
+
+.btn{
+    margin-top:1rem;
+    display: inline-block;
+    padding: 8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    background: #666;
+    color: #fff;;
+    cursor:pointer;
+}
+.navbar{
+    position:inherit;
+    top:0;left:0;right:0;
+    z-index:10000;
+    background:#333333;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:1.5rem 9%;
+}
+
+.header .logo{
+    font-weight: bolder;
+    color:#305844;
+    font-size: 2.5rem;
+}
+
+.header .logo span{
+    color:var(--main-color);
+
+}
+
+.navbar a{
+    font-size:1.7rem;
+    color:whitesmoke;
+    margin-right: 4rem;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+#menu-bars{
+    font-size: 3rem;
+    color: #fff;
+    cursor:pointer;
+    display: none;
+}
+
+.home .content{
+    text-align:center;
+    padding-top:6rem;
+    margin:2rem auto;
+    max-width: 70rem;
+}
+
+.home .content h3{
+    color:#fff;
+    font-size:4.5rem;
+    text-transform: uppercase;
+}
+
+.home .content span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+

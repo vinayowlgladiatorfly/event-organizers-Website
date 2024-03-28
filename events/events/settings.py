@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'payments'
+    'base',
+    'payment1'
 ]
 
 MIDDLEWARE = [
@@ -133,9 +134,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-PAYMENT_HOST = 'localhost:8000'
-
-PAYMENT_USES_SSL = False
-
-STRIPE_PUBLIC_KEY = 'pk_test_51ORY7SSCEX0bZKTz6mesATp1faVTpbhJ3Jkd8zkyvnX3UvAeWuCQyQJlBNexB2QXSKlzFktzbJbn0pc827YqXNt500pyQbB6Au'
-STRIPE_SECRET_KEY = 'sk_test_51ORY7SSCEX0bZKTzoAHyfWyGSZPDGeMgmCLJPM7bCaAzCu6NJT04QJuEmYivbin2d6SQvWL2Sn6f17BQy33rTB7B001RjEARo7'

@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from eventify import urls
+from payment1 import urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('eventify.urls'))
+    path('',include('eventify.urls')),
+    path('base/',include('base.urls')),
+    path('payment/',include('payment1.urls')),
 ]

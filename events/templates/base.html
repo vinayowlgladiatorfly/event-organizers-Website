@@ -1,4 +1,4 @@
-<!--html lang="en">
+<html lang="en">
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -10,7 +10,16 @@
 <body>
     <section class="container">
         <h4>The Event Comes In</h4>
-        <form action="#" class="form">
+        <form method = 'POST' class="form">
+            {% csrf_token %}
+            <div class="input-box">
+                <label for="event_type">Event Type:</label>
+                <select name="event_type" id="event_types">
+                {% for event_type,label in event_types %}
+                    <option value="{{ event_type }}" {% if event_type == event_type %}selected{% endif %}>{{ label }}</option>
+                {% endfor %}
+    </select>
+            </div>
             <div class="input-box">
                 <label>Full Name:</label>
                 <input type="text" placeholder="Enter your name" name="full_name" required>
@@ -59,10 +68,10 @@
         </form>
     </section>
 </body>
-</html-->
+</html>
 
 
-<!DOCTYPE html>
+<!--!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,15 +80,15 @@
 </head>
 <body>
     <h2>Create Event - {{ event_type|title }}</h2>
-    <form method = "POST" action="{% url 'base_with_event_type' event_type=event_type %}">
+    <form method = "POST" action="/">
         {% csrf_token %}
         {{ event_form.as_p}}
     
-        <a href="{% url 'payment' %}">submit</a>
+        <a>submit</a>
 
     </form>
 
 
 
 </body>
-</html>
+</html-->
